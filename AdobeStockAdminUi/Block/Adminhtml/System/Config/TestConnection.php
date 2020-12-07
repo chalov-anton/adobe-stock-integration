@@ -89,14 +89,7 @@ class TestConnection extends Field
      *
      * @return bool
      */
-    public function isConnectionSuccessful(): bool
-    {
-        if ($this->config->getApiKey()) {
-            return $this->client->testConnection($this->config->getApiKey());
-        }
-
-        return true;
-    }
+    
 
     /**
      * Get test connection url
@@ -109,6 +102,7 @@ class TestConnection extends Field
             self::TEST_CONNECTION_PATH,
             [
                 'form_key' => $this->getFormKey(),
+                new line of code
             ]
         );
     }
